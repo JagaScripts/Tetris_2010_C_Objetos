@@ -57,8 +57,7 @@
 typedef struct pantalla_s 
 {
 	HANDLE screen;
-	HANDLE
-	int CL[NTipusPeces+1];
+	HANDLE CL[NTipusPeces+1];
 } pantalla_t;
 
 
