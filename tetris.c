@@ -21,10 +21,40 @@ int main(int argc, char **argv)
 	{
 		opcio = MostrarMenu();
 
-		// Codi a completar
+		switch(opcio)						//PARA CADA CASO
+		{
+			case TECLA_1:
+				system("cls");
+				MenuPuntuaciones(puntuacions);
+				system("cls");
+				break;
+			case TECLA_2:
+				system("cls");
+				nivellInicial=SeleccionarNivel(nivellInicial);
+				system("cls");
+				break;
+			case TECLA_3:
+				nPuntuacions=Jugar(&tauler,nivellInicial);
+				ConpararMejoresPuntuaciones(puntuacions,nPuntuacions);
+				EscribirFicheroPuntuaciones(puntuacions);
+				system("cls");
+				break;
+			case TECLA_4:
+				system("cls");
+				opcio=PreguntaSalir();
+				system("cls");
+				break;
+			case TECLA_S_MINUS:
+			case TECLA_S_MAYUS:
+				opcio=0;
+				system("cls");
+				break;
+			default :
+				system("cls");
+				break;
+		}
 
-	}
-	while (opcio != SORTIR);
+	}while (opcio != SORTIR);
 	
 	EscriurePuntuacions(puntuacions,nPuntuacions);
 
