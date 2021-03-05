@@ -401,7 +401,7 @@ int Jugar(pantalla_t *tauler,int nivell)
 		posicioFinal=ControlCaigudaPesa(pesa,nivell,liniaJoc,&nCiclesRotacio,tauler);
 		if (posicioFinal>=-1)
 		{
-			EsborraLinia(tauler,liniaJoc);
+			EsborraLinia(tauler);
 			colisio=ColocarPesa(liniaJoc,posicioFinal,pesa);
 			MostraLinia(tauler,liniaJoc);
 

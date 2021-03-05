@@ -1,13 +1,5 @@
-#include <stdio.h>
-#include <conio.h>
-#include <stdlib.h>
-
-
 #include "tetris.h"
-#include "rutines.h"
-#include "GestioPuntuacions.h"
-#include "GestioJoc.h"
-#include "Peces.h"
+
 
 //===================================================================================
 int main(int argc, char **argv)

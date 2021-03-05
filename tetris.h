@@ -2,6 +2,15 @@
 #ifndef TETRIS
 #define TETRIS
 
+#include <stdio.h>
+#include <conio.h>
+#include <stdlib.h>
+
+#include "rutines_w.c"
+#include "GestioPuntuacions.c"
+#include "GestioJoc.c"
+#include "Peces.h"
+
 // Constants pel Men� Principal
 #define NIVELL '1'
 #define JUGAR  '2'
