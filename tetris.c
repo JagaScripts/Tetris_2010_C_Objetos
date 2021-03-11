@@ -25,18 +25,19 @@ int main(int argc, char **argv)
 		{
 			case TECLA_1:
 				system("cls");
-				MenuPuntuaciones(puntuacions);
+				LlegirPuntuacions(puntuacions);
+				MostrarPuntuacions(puntuacions,nPuntuacions);
 				system("cls");
 				break;
 			case TECLA_2:
 				system("cls");
-				nivellInicial=SeleccionarNivel(nivellInicial);
+				nivellInicial=SeleccionarNivel();
 				system("cls");
 				break;
 			case TECLA_3:
-				nPuntuacions=Jugar(&tauler,nivellInicial);
-				ConpararMejoresPuntuaciones(puntuacions,nPuntuacions);
-				EscribirFicheroPuntuaciones(puntuacions);
+				punts=Jugar(&tauler, nivellInicial);
+				ActualitzarPuntuacions(puntuacions,nPuntuacions,punts);
+				EscriurePuntuacions(puntuacions, nPuntuacions);
 				system("cls");
 				break;
 			case TECLA_4:
@@ -112,4 +113,16 @@ int SeleccionarNivell()
 		nivell = getch()-'0';
 	} while ((nivell<1)||(nivell>3));
 	return nivell;
+}
+
+//Funci�n que pregunta si quieres salir y devueve la tecla pulsada.
+int PreguntaSalir()
+{
+int Accion;
+	printf("Estas segur que vols sortir? \n");
+	printf("Prem s per si y n per no\n");
+	fflush(stdin);									
+	Accion=getch();
+	
+	return Accion;
 }
